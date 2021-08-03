@@ -54,6 +54,10 @@ export class Product {
         return this._product.methods.getManufacturerAddress(_EPC).call();
     }
 
+    public getManufacturerName(_EPC: string) {
+        return this._product.methods.getCompanyName(_EPC).call();
+    }
+
     public getCompanyPrefix(_EPC: string) {
         return this._product.methods.getCompanyPrefix(_EPC).call();
     }

@@ -1,9 +1,18 @@
 {
+  "name": "supplychain.eth",
+  "version": "0.0.1",
+  "description": "AntiCounterfeiting Suite for securing post supplychain products",
+  "author": "aa-deet-eeya",
+  "license": "MIT",
   "dependencies": {
     "@truffle/hdwallet-provider": "^1.4.2",
     "dotenv": "^10.0.0",
     "ts-node": "^10.1.0",
     "web3": "^1.5.0"
+  },
+  "engines": {
+    "node": "16.0.x",
+    "npm": "7.10.x"
   },
   "scripts": {
     "migrate": "rm -rf build && truffle migrate --reset --compile-all --network development",

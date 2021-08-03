@@ -251,12 +251,22 @@ contract Product is Ownable {
     }
 
     /*
-     *  Getter function for Product's Manufacturer
+     *  Getter function for Product's Manufacturer Address
     */    
-    function getManufacturerAddress(uint256 _EPC) view public returns(address) {
+    function getManufacturerAddress(uint256 _EPC) onlyExist(_EPC) view public returns(address) {
         uint256 _companyPrefix = _EPCtoCompanyPrefix[_EPC];
         
         return _companyPrefixToAddress[_companyPrefix];
+    }
+
+    /*
+     *  Getter function for Product's Manufacturer Name
+    */  
+    function getCompanyName(uint256 _EPC) onlyExist(_EPC) view public returns(bytes32) {
+        address _manufacturerAddress = _companyPrefixToAddress[_EPCtoCompanyPrefix[_EPC]];
+        ManufacturerInfo memory _info = _manufacturers[_manufacturerAddress];
+
+        return _info.companyName;
     }
 
     /*
