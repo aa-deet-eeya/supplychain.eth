@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.4.2",
+    "dotenv": "^10.0.0",
+    "ts-node": "^10.1.0",
+    "web3": "^1.5.0"
+  },
+  "scripts": {
+    "migrate": "rm -rf build && truffle migrate --reset --compile-all --network development",
+    "example": "ts-node ./example"
+  }
+}
