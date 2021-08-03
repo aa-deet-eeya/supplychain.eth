@@ -229,8 +229,7 @@ contract Product is Ownable {
     /*
      *  Getter function for Product's current Reciepient
     */
-    function getRecipient(uint256 _EPC) 
-    onlyExist(_EPC) onlyStatusIs(_EPC, ProductStatus.Shipped) external view returns (address) {
+    function getRecipient(uint256 _EPC) onlyExist(_EPC) external view returns (address) {
         return products[_EPC].recipient;
     }
 
