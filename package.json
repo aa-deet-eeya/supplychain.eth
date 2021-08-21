@@ -16,6 +16,8 @@
   },
   "scripts": {
     "migrate": "rm -rf build && truffle migrate --reset --compile-all --network development",
+    "ganache": "ganache-cli -h 0.0.0.0 -m=\"clinic gas film sword lottery gain empower swift special uncle same slide\"",
+    "test": "truffle test --network development",
     "example": "ts-node ./example"
   }
 }
